@@ -7,6 +7,7 @@ use App\Models\Mitra;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use UxWeb\SweetAlert\SweetAlert;
 
 
 
@@ -19,9 +20,10 @@ class Login extends Controller
       // Passwordnya pake bcrypt
       if(Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
         // if successful, then redirect to their intended location
+        alert()->success('Login Sebagai Mitra', 'Berhasil');
         return redirect()->intended('/admin');
     }else if (Auth::guard('mitra')->attempt(['email' => $request->email, 'password' => $request->password])) {
-
+        alert()->success('Login Sebagai Pemilik Toko', 'Berhasil');
         return redirect()->intended('/mitra');
     }else if (Auth::guard('konsumen')->attempt(['email' => $request->email, 'password' => $request->password])) {
 
@@ -41,9 +43,40 @@ class Login extends Controller
           } elseif (Auth::guard('konsumen')->check()) {
             Auth::guard('konsumen')->logout();
           }
-
-          return redirect('/masuk');
+        alert()->success('Anda Telah Logout', 'Berhasil');
+          return redirect('/');
     }
+    public function register()
+    {
+        return view('register');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+    		'nama' => 'required',
+    		'email' => 'required',
+    		'password' => 'required',
+    		'noKtp' => 'required',
+    		'alamat' => 'required',
+    		'noHp' => 'required'
+
+    	]);
+        Konsumen::create([
+    		'nama' => $request->nama,
+    		'email' => $request->email,
+            'password' => Hash::make($request->password),
+    		'noKtp' => $request->noKtp,
+    		'alamat' => $request->alamat,
+    		'noHp' => $request->noHp
+
+    	]);
+        alert()->success('Registrasi Konsumen telah berhasil', 'Berhasil');
+
+        return redirect('/masuk');
+
+    }
+
 }
 
 

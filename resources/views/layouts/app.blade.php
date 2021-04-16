@@ -1,582 +1,341 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Target Material Design Bootstrap Admin Template</title>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
-    <!-- Bootstrap Styles-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FontAwesome Styles-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- Morris Chart Styles-->
-    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <!-- Custom Styles-->
-    <link href="assets/css/custom-styles.css" rel="stylesheet" />
-    <!-- Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{{asset('argon/assets/img/brand/favicon.png') }}" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="{{asset('argon/assets/vendor/nucleo/css/nucleo.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{asset('argon/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="{{asset('argon/assets/css/argon.css?v=1.2.0" type="text/css') }}">
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav class="navbar navbar-default top-navbar" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">track_changes</i> <strong>target</strong></a>
+  <!-- Sidenav -->
+  <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+      <!-- Brand -->
+      <div class="sidenav-header  align-items-center">
+        <a class="navbar-brand" href="javascript:void(0)">
+          <img src="{{asset('argon/assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
+        </a>
+      </div>
+      <div class="navbar-inner">
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+          <!-- Nav items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard.html">
+                <i class="ni ni-tv-2 text-primary"></i>
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="icons.html">
+                <i class="ni ni-planet text-orange"></i>
+                <span class="nav-link-text">Produk</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/indexkategori">
+                <i class="ni ni-pin-3 text-primary"></i>
+                <span class="nav-link-text">Kategori</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Transaksi</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tables.html">
+                <i class="ni ni-bullet-list-67 text-default"></i>
+                <span class="nav-link-text">Laporan Keuangan</span>
+              </a>
+            </li>
 
-		<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
-            </div>
+          </ul>
 
-            <ul class="nav navbar-top-links navbar-right">
-				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-				  <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-        </nav>
-		<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-<li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
-</li>
-<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-</li>
-<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-</li>
-</ul>
-<ul id="dropdown2" class="dropdown-content w250">
-  <li>
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-</ul>
-<ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
-<li>
-		<a href="#">
-			<div>
-				<p>
-					<strong>Task 1</strong>
-					<span class="pull-right text-muted">60% Complete</span>
-				</p>
-				<div class="progress progress-striped active">
-					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						<span class="sr-only">60% Complete (success)</span>
-					</div>
-				</div>
-			</div>
-		</a>
-	</li>
-	<li class="divider"></li>
-	<li>
-		<a href="#">
-			<div>
-				<p>
-					<strong>Task 2</strong>
-					<span class="pull-right text-muted">28% Complete</span>
-				</p>
-				<div class="progress progress-striped active">
-					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
-						<span class="sr-only">28% Complete</span>
-					</div>
-				</div>
-			</div>
-		</a>
-	</li>
-	<li class="divider"></li>
-	<li>
-		<a href="#">
-			<div>
-				<p>
-					<strong>Task 3</strong>
-					<span class="pull-right text-muted">60% Complete</span>
-				</p>
-				<div class="progress progress-striped active">
-					<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-						<span class="sr-only">60% Complete (warning)</span>
-					</div>
-				</div>
-			</div>
-		</a>
-	</li>
-	<li class="divider"></li>
-	<li>
-		<a href="#">
-			<div>
-				<p>
-					<strong>Task 4</strong>
-					<span class="pull-right text-muted">85% Complete</span>
-				</p>
-				<div class="progress progress-striped active">
-					<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-						<span class="sr-only">85% Complete (danger)</span>
-					</div>
-				</div>
-			</div>
-		</a>
-	</li>
-	<li class="divider"></li>
-	<li>
-</ul>
-<ul id="dropdown4" class="dropdown-content dropdown-tasks w250 taskList">
-  <li>
-                                <div>
-                                    <strong>John Doe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Today</em>
-                                    </span>
-                                </div>
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</p>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the...</p>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-</ul>
-	   <!--/. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
+          <!-- Divider -->
+          <hr class="my-3">
+          <!-- Heading -->
 
-                    <li>
-                        <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="ui-elements.html" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
-                    </li>
-					<li>
-                        <a href="chart.html" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tab-panel.html" class="waves-effect waves-dark"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
-                    </li>
-
-                    <li>
-                        <a href="table.html" class="waves-effect waves-dark"><i class="fa fa-table"></i> Responsive Tables</a>
-                    </li>
-                    <li>
-                        <a href="form.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> Forms </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="empty.html" class="waves-effect waves-dark"><i class="fa fa-fw fa-file"></i> Empty Page</a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </nav>
-        <!-- /. NAV SIDE  -->
-
-		<div id="page-wrapper">
-		  <div class="header">
-                        <h1 class="page-header">
-                            Dashboard
-                        </h1>
-						<ol class="breadcrumb">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">Dashboard</a></li>
-					  <li class="active">Data</li>
-					</ol>
-
-		</div>
-            <div id="page-inner">
-
-			<div class="dashboard-cards">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-
-						<div class="card horizontal cardIcon waves-effect waves-dark">
-						<div class="card-image red">
-						<i class="material-icons dp48">import_export</i>
-						</div>
-						<div class="card-stacked red">
-						<div class="card-content">
-						<h3>84,198</h3>
-						</div>
-						<div class="card-action">
-						<strong>REVENUE</strong>
-						</div>
-						</div>
-						</div>
-
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-
-						<div class="card horizontal cardIcon waves-effect waves-dark">
-						<div class="card-image orange">
-						<i class="material-icons dp48">shopping_cart</i>
-						</div>
-						<div class="card-stacked orange">
-						<div class="card-content">
-						<h3>36,540</h3>
-						</div>
-						<div class="card-action">
-						<strong>SALES</strong>
-						</div>
-						</div>
-						</div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-
-							<div class="card horizontal cardIcon waves-effect waves-dark">
-						<div class="card-image blue">
-						<i class="material-icons dp48">equalizer</i>
-						</div>
-						<div class="card-stacked blue">
-						<div class="card-content">
-						<h3>24,225</h3>
-						</div>
-						<div class="card-action">
-						<strong>PRODUCTS</strong>
-						</div>
-						</div>
-						</div>
-
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-
-					<div class="card horizontal cardIcon waves-effect waves-dark">
-						<div class="card-image green">
-						<i class="material-icons dp48">supervisor_account</i>
-						</div>
-						<div class="card-stacked green">
-						<div class="card-content">
-						<h3>88,658</h3>
-						</div>
-						<div class="card-action">
-						<strong>VISITS</strong>
-						</div>
-						</div>
-						</div>
-
-                    </div>
-                </div>
-			   </div>
-				<!-- /. ROW  -->
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-7">
-					<div class="cirStats">
-						  	<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-6">
-										<div class="card-panel text-center">
-											<h4>Profit</h4>
-											<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
-											</div>
-										</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-6">
-										<div class="card-panel text-center">
-											<h4>No. of Visits</h4>
-											<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
-											</div>
-										</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-6">
-										<div class="card-panel text-center">
-											<h4>Customers</h4>
-											<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
-											</div>
-										</div>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-6">
-										<div class="card-panel text-center">
-											<h4>Sales</h4>
-											<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
-											</div>
-										</div>
-								</div>
-							</div>
-						</div>
-						</div><!--/.row-->
-						<div class="col-xs-12 col-sm-12 col-md-5">
-						     <div class="row">
-									<div class="col-xs-12">
-									<div class="card">
-										<div class="card-image donutpad">
-										  <div id="morris-donut-chart"></div>
-										</div>
-										<div class="card-action">
-										  <b>Donut Chart Example</b>
-										</div>
-									</div>
-								</div>
-							 </div>
-						</div><!--/.row-->
-					</div>
-
-
-				<div class="row">
-				<div class="col-md-5">
-						<div class="card">
-						<div class="card-image">
-						 <div id="morris-line-chart"></div>
-						</div>
-						<div class="card-action">
-						  <b>Line Chart</b>
-						</div>
-						</div>
-
-					</div>
-
-						<div class="col-md-7">
-					<div class="card">
-					<div class="card-image">
-					  <div id="morris-bar-chart"></div>
-					</div>
-					<div class="card-action">
-					  <b> Bar Chart Example</b>
-					</div>
-					</div>
-					</div>
-
-				</div>
-
-
-
-                <div class="row">
-                    <div class="col-xs-12">
-						<div class="card">
-					<div class="card-image">
-					  <div id="morris-area-chart"></div>
-					</div>
-					<div class="card-action">
-					  <b>Area Chart</b>
-					</div>
-					</div>
-                    </div>
-
-                </div>
-				<div class="row">
-				<div class="col-md-12">
-
-					</div>
-				</div>
-                <!-- /. ROW  -->
-
-
-
-
-
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-						<div class="card"><div class="card-action">
-					  <b>Tasks Panel</b>
-					</div>
-					<div class="card-image">
-					  <div class="collection">
-						  <a href="#!" class="collection-item">Red<span class="new badge red" data-badge-caption="red">4</span></a>
-						  <a href="#!" class="collection-item">Blue<span class="new badge blue" data-badge-caption="blue">4</span></a>
-						  <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
-							<a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
-							<a href="#!" class="collection-item">Alan<span class="new badge blue" data-badge-caption="blue">4</span></a>
-							<a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
-							   <a href="#!" class="collection-item">Custom Badge Captions<span class="new badge" data-badge-caption="custom caption">4</span></a>
-							<a href="#!" class="collection-item">Custom Badge Captions<span class="badge" data-badge-caption="custom caption">4</span></a>
-						</div>
-					</div>
-
-					</div>
-
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-	<div class="card">
-	<div class="card-action">
-					  <b>User List</b>
-					</div>
-					<div class="card-image">
-					  <ul class="collection">
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">track_changes</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">track_changes</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-  </ul>
-					 </div>
-					</div>
-
-
-
-                    </div>
-                </div>
-                <!-- /. ROW  -->
-			   <div class="fixed-action-btn horizontal click-to-toggle">
-    <a class="btn-floating btn-large red">
-      <i class="material-icons">menu</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="material-icons">track_changes</i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
-  </div>
-
-				<footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p>
-
-
-				</footer>
-            </div>
-            <!-- /. PAGE INNER  -->
+          <!-- Navigation -->
+          {{-- <ul class="navbar-nav mb-md-3">
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Getting started</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
+                <i class="ni ni-palette"></i>
+                <span class="nav-link-text">Foundation</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
+                <i class="ni ni-ui-04"></i>
+                <span class="nav-link-text">Components</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
+                <i class="ni ni-chart-pie-35"></i>
+                <span class="nav-link-text">Plugins</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active active-pro" href="upgrade.html">
+                <i class="ni ni-send text-dark"></i>
+                <span class="nav-link-text">Upgrade to PRO</span>
+              </a>
+            </li>
+          </ul> --}}
         </div>
-        <!-- /. PAGE WRAPPER  -->
+      </div>
     </div>
-    <!-- /. WRAPPER  -->
-    <!-- JS Scripts-->
-    <!-- jQuery Js -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+  </nav>
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+          <!-- Navbar links -->
+          <ul class="navbar-nav align-items-center  ml-md-auto ">
+            <li class="nav-item d-xl-none">
+              <!-- Sidenav toggler -->
+              <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </div>
+            </li>
 
-	<!-- Bootstrap Js -->
-    <script src="assets/js/bootstrap.min.js"></script>
+          </ul>
+          <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+            <li class="nav-item dropdown">
+              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="media align-items-center">
+                  <span class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="{{asset('argon/assets/img/theme/team-4.jpg') }}">
+                  </span>
+                  <div class="media-body  ml-2  d-none d-lg-block">
+                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-menu  dropdown-menu-right ">
+                <div class="dropdown-header noti-title">
+                  <h6 class="text-overflow m-0">Welcome!</h6>
+                </div>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-single-02"></i>
+                  <span>My profile</span>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-settings-gear-65"></i>
+                  <span>Settings</span>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-calendar-grid-58"></i>
+                  <span>Activity</span>
+                </a>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-support-16"></i>
+                  <span>Support</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#!" class="dropdown-item">
+                  <i class="ni ni-user-run"></i>
+                  <span>Logout</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Default</li>
+                </ol>
+              </nav>
+            </div>
 
-	<script src="assets/materialize/js/materialize.min.js"></script>
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                  <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+                          <span class="h2 font-weight-bold mb-0">350,897</span>
+                        </div>
+                        <div class="col-auto">
+                          <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                            <i class="ni ni-active-40"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mt-3 mb-0 text-sm">
+                        <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                        <span class="text-nowrap">Since last month</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+                          <span class="h2 font-weight-bold mb-0">2,356</span>
+                        </div>
+                        <div class="col-auto">
+                          <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                            <i class="ni ni-chart-pie-35"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mt-3 mb-0 text-sm">
+                        <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                        <span class="text-nowrap">Since last month</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+                          <span class="h2 font-weight-bold mb-0">924</span>
+                        </div>
+                        <div class="col-auto">
+                          <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                            <i class="ni ni-money-coins"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mt-3 mb-0 text-sm">
+                        <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                        <span class="text-nowrap">Since last month</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                  <div class="card card-stats">
+                    <!-- Card body -->
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
+                          <span class="h2 font-weight-bold mb-0">49,65%</span>
+                        </div>
+                        <div class="col-auto">
+                          <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                            <i class="ni ni-chart-bar-32"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mt-3 mb-0 text-sm">
+                        <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                        <span class="text-nowrap">Since last month</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
 
-    <!-- Metis Menu Js -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-    <!-- Morris Chart Js -->
-    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="assets/js/morris/morris.js"></script>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+
+          </div>
+        </div>
+
+      </div>
 
 
-	<script src="assets/js/easypiechart.js"></script>
-	<script src="assets/js/easypiechart-data.js"></script>
-
-	 <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
-
-    <!-- Custom Js -->
-    <script src="assets/js/custom-scripts.js"></script>
 
 
+
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="footer pt-0">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-6">
+            <div class="copyright text-center  text-lg-left  text-muted">
+              &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="{{asset('argon/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{asset('argon/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{asset('argon/assets/vendor/js-cookie/js.cookie.js') }}"></script>
+  <script src="{{asset('argon/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
+  <script src="{{asset('argon/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
+  <!-- Optional JS -->
+  <script src="{{asset('argon/assets/vendor/chart.js/dist/Chart.min.js') }}"></script>
+  <script src="{{asset('argon/assets/vendor/chart.js/dist/Chart.extension.js') }}"></script>
+  <!-- Argon JS -->
+  <script src="{{asset('argon/assets/js/argon.js?v=1.2.0') }}"></script>
 </body>
 
 </html>

@@ -17,6 +17,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="{{asset('login/css/style.css')}}">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Login SIP TANI</title>
   </head>
@@ -78,5 +79,7 @@
     <script src="{{asset('js/popper.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
+  @include('sweet::alert')
+
   </body>
 </html>

@@ -9,4 +9,7 @@ class Konsumen extends Model
 {
     use HasFactory;
     protected $table ='konsumen';
+    protected $fillable = [
+        'nama','email','password','noKtp','alamat','noHp'
+    ];
 }
